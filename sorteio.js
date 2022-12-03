@@ -51,7 +51,7 @@ function fala(e) {
 
 
 function mostraNaTela(number2){
-    elementoChute.innerHTML = `<div>Você disse:</div>
+    elementoChute.innerHTML = `<div>Your guess:</div>
     <span class="box">${number2}</span>
     `
 }
@@ -85,26 +85,26 @@ function checkIfItsOk(palpite) {
 
 function seAcertou(numero) {
     if (numero === numeroSorteado) {
-        document.body.innerHTML = `<h2>Parabéns, você acertou!!</h2>
-        <h3>O número era: ${numeroSorteado}</h3>
-        <button id="jogar-novamente" class="jogar">Jogar Novamente</button>
+        document.body.innerHTML = `<h2>Congratulations, you won!!</h2>
+        <h3>Secret number was: ${numeroSorteado}</h3>
+        <button id="jogar-novamente" class="jogar">Play again!</button>
         `;
     }
     else if (numero > numeroSorteado) {
         elementoChute.innerHTML = `<div>Você disse:</div>
         <span class="box">${numero}</span>
-        <div>O número secreto é menor que seu palpite, tente novamente</div>`
+        <div>The secret number is lower than your guess, try again</div>`
     }
     else {
         elementoChute.innerHTML = `<div>Você disse:</div>
         <span class="box">${numero}</span>
-        <div>O número secreto é maior que seu palpite, tente novamente</div>`
+        <div>The secret number is greater than your guess, try again</div>`
     }
 }
 
 function numberInRange(numero) {
     if (numero > maiorValor || numero < menorValor) {
-        elementoChute.innerHTML += `<div>O seu palpite precisa estar entre ${menorValor} e ${maiorValor}</div>`;
+        elementoChute.innerHTML += `<div>Your guess must be between ${menorValor} and ${maiorValor}</div>`;
         return
     }
 }

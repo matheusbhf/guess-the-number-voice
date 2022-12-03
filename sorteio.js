@@ -28,7 +28,7 @@ const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechReco
 
 const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
-recognition.lang = "pt-Br";
+recognition.lang = "en-US";
 
 // Start
 
@@ -71,7 +71,7 @@ function checkIfItsOk(palpite) {
 
     if(seInvalido(numero)) {
 
-        elementoChute.innerHTML += `<div>Valor inválido</div>`;
+        elementoChute.innerHTML += `<div>Invalid value! Try again!</div>`;
 
         return
     };
@@ -91,7 +91,7 @@ function seAcertou(numero) {
         `;
     }
     else if (numero > numeroSorteado) {
-        elementoChute.innerHTML = `<div>Você disse:</div>
+        elementoChute.innerHTML = `<div>Your guess:</div>
         <span class="box">${numero}</span>
         <div>The secret number is lower than your guess, try again</div>`
     }

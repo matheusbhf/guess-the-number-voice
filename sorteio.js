@@ -96,7 +96,7 @@ function seAcertou(numero) {
         <div>The secret number is lower than your guess, try again</div>`
     }
     else {
-        elementoChute.innerHTML = `<div>Você disse:</div>
+        elementoChute.innerHTML = `<div>Your guess:</div>
         <span class="box">${numero}</span>
         <div>The secret number is greater than your guess, try again</div>`
     }
